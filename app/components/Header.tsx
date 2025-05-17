@@ -13,8 +13,8 @@ export default function Header() {
     },
   
     {
-      name: "Post",
-      href: "/posts",
+      name: "Product",
+      href: "/products",
     },
   ];
   return (
@@ -22,7 +22,7 @@ export default function Header() {
       <ul className="flex gap-3 p-2 text-center">
         {menuItems.map((link, index) => (
           <li key={index}>
-            <Link href={link.href} className={ pathname === `${link.href}` ? "text-blue-500" : ""} >{link.name}</Link>
+            <Link href={link.href} className={ pathname === `${link.href}` ? "text-blue-500" : "" } >{link.name}</Link>
           </li>
         ))
         }
