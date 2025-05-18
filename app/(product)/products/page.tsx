@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from '@/styles/Product.module.css'
 
 async function getPostData() {
-  const res = await fetch("https://fakestoreapi.com/products?limit=12");
+  const res = await fetch("https://fakestoreapi.com/products");
   return res.json();
 }
 
