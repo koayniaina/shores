@@ -1,6 +1,6 @@
 .product {
   display: grid;
-  background-color: rgb(175, 175, 175);
+  /* background-color: rgb(175, 175, 175); */
   padding: 1rem;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -8,6 +8,7 @@
 
 .product a {
   border-radius: 3px;
+  box-shadow: 0 0px 2px black;
   background-color: rgb(255, 255, 255);
 }
 
@@ -48,40 +49,33 @@
   /* margin: 0.4rem 0 0.4rem; */
 }
 
-
 /* ===================================================== */
-.params {
-  background-color: rgb(209, 209, 209);
+.params_id {
   padding: 1rem;
-  height: 100vh;
-}
-
-.params_id{
+  box-shadow: 0 0px 2px black;
   background-color: rgb(255, 255, 255);
-  padding: 1rem;
+  margin: 1rem;
   border-radius: 3px;
 }
 
-.mains{
-    display: flex;
-    gap: 1rem;
-  
+.mains {
+  display: flex;
+  gap: 1rem;
 }
 
-.ids{
+.ids {
   font-size: 2rem;
 }
 
-.categorys{
+.categorys {
   display: flex;
   color: gray;
-  gap: .3rem;
+  gap: 0.3rem;
   text-transform: capitalize;
   align-items: center;
-
 }
 
-.body p{
+.body p {
   font-size: 1.3rem;
 }
 
@@ -91,4 +85,46 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   /* margin: 0.3rem 1rem 0.3rem; */
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:.3rem 1rem;
+  gap: 1rem;
+
+  h2{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+.search{
+  border: 1px solid rgb(194, 194, 194);
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  gap: .2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: .3rem .5rem;
+  border-radius: 3px;
+
+  input{
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+}
+
+.input{
+  display: flex;
+  /* width: 100%; */
+  /* max-width: 200px; */
+  gap: .2rem;
+  align-items: center;
+  /* padding: .3rem .5rem; */
+  /* border-radius: 3px; */
 }

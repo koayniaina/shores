@@ -1,5 +1,7 @@
 import Link from "next/link";
-import styles from '@/styles/Product.module.css'
+import styles from "@/styles/Product.module.css";
+import Product from "@/components/Product";
+
 
 async function getPostData() {
   const res = await fetch("https://fakestoreapi.com/products");
@@ -11,6 +13,7 @@ export default async function Products() {
 
   return (
     <div>
+      <Product/>
       <ul className={styles.product}>
         {products.map(
           (product: {
@@ -20,17 +23,15 @@ export default async function Products() {
             title: string;
             price: string;
           }) => (
-            // <div >
-              <Link href={"/products/" + product.id} key={product.id}>
-                <img src={product.image} className={styles.imgs}/>
-                <span className={styles.id}>{product.id}</span>
-                <div className={styles.category}>
-                  <h3>{product.category}</h3>
-                  <p>$ {product.price}</p>
-                </div>
-                <h2 className={styles.htag}>{product.title}</h2>
-              </Link>
-            // </div>
+            <Link href={"/products/" + product.id} key={product.id}>
+              <img src={product.image} className={styles.imgs} />
+              <span className={styles.id}>{product.id}</span>
+              <div className={styles.category}>
+                <h3>{product.category}</h3>
+                <p>$ {product.price}</p>
+              </div>
+              <h2 className={styles.htag}>{product.title}</h2>
+            </Link>
           )
         )}
       </ul>
