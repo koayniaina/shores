@@ -9,13 +9,6 @@ export default function Product() {
       <div className="logo">
         <Link href="/">My Product</Link>
       </div>
-      <div className={styles.search}>
-        <div className={styles.input}>
-          <CiSearch />
-          <input type="search" placeholder="Search..." />
-        </div>
-        <div className={styles.filter}>hewewrew</div>
-      </div>
     </div>
   );
 }
